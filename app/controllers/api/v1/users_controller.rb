@@ -41,6 +41,15 @@ class Api::V1::UsersController < ApplicationController
     # Update user if they have image or country
     @user.update(image: image, country: country)
 
+    #Update the user access/refresh_tokens
+    if @user.access_token_expired?
+      @user.refresh_access_token
+    else
+      @user.update(
+        access_token: auth_params["access_token"],
+        refresh_token: auth_params["refresh_token"])
+    end
+
     # Redirect to the frontend App homepage
     redirect_to "http://localhost:3001/top-artists"
   end
