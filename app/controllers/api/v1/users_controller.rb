@@ -51,7 +51,7 @@ class Api::V1::UsersController < ApplicationController
     end
 
     # Redirect to the frontend App homepage
-    redirect_to "http://localhost:3001/top-artists"
+    redirect_to "http://localhost:3001/app"
   end
 
   # Update user once a new playlist has been created for them
