@@ -6,6 +6,9 @@ ruby '2.3.3'
 #Use serializers to convert your data into a format that can be easily transferred across a network as a string and reconstructed later
 gem 'active_model_serializers'
 
+#Rest Client
+gem 'rest-client'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
