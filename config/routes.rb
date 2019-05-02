@@ -24,6 +24,7 @@ Rails.application.routes.draw do
       get '/login', to: "auth#spotify_request"
       get '/auth', to: "auth#show" #what are we using this for?
       get '/user', to: "users#create"
+      get '/sessions', to: "sessions#create"
     end
   end
 

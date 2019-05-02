@@ -55,8 +55,9 @@ class Api::V1::UsersController < ApplicationController
         refresh_token: auth_params["refresh_token"])
     end
 
-    # Redirect to the frontend App homepage
-    redirect_to "http://localhost:3001/app"
+    session[:user_id] = @user.id
+    # Redirect to sessions controller
+    redirect_to "http://localhost:3000/api/v1/sessions"
   end
 
   # Update user once a new playlist has been created for them
